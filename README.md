@@ -1,4 +1,6 @@
-# Development Challenge for Node.js **HTTP REST API**
+# Development Challenge for Node.js 
+
+**HTTP REST API**
 
 I used the structure of **[express-generator](https://expressjs.com/en/starter/generator.html)**
 
@@ -26,13 +28,14 @@ Run server (compiled)
 		npm start
 
 Server: **http://localhost:4000**
+
 Entry point: **/api/v1/improvein**
 
 ## Paths
 
 **Login**
 
-Login: **POST /login**. Example:
+* Login: **POST /login**. Example:
 		
 		# In the body of the request
 		{
@@ -42,7 +45,7 @@ Login: **POST /login**. Example:
 
 **Jwt**
 
-Refresh token: **POST /jwt/refresh**
+* Refresh token: **POST /jwt/refresh**
 
 		# In the body of the request
 		{
@@ -51,15 +54,15 @@ Refresh token: **POST /jwt/refresh**
 
 **Movies**
 
-Get all the movies: **GET /movies**
-Get a movie **GET /movies/:query**. Example: **/movies/name=titanic**
-Add a new movie **POST /movies**
+* Get all the movies: **GET /movies**
+* Get a movie **GET /movies/:query**. Example: **/movies/name=titanic**
+* Add a new movie **POST /movies**
 
 **Tv Shows**
 
-Get all the tv shows: **GET /tvshows**
-Get a tv show **GET /tvshows/:query**. Example: **/tvshows/name=tvshow&episode=1**
-Add a new tv show **POST /tvshows**
+* Get all the tv shows: **GET /tvshows**
+* Get a tv show **GET /tvshows/:query**. Example: **/tvshows/name=tvshow&episode=1**
+* Add a new tv show **POST /tvshows**
 
 ## Environment
 
@@ -76,4 +79,4 @@ In the `.env` file:
 
 ## Linters
 
-JsHint(https://jshint.com/docs/options/)
+[JsHint](https://jshint.com/docs/options/)
