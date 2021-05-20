@@ -15,7 +15,7 @@ dotenv.config()
  * 
  * @param {JwtPayload | Object | String} payload - jwt payload
  * @param {SignOptions} options - options for the signature
- * @returns {string} the JWT
+ * @returns {string} the JSONWebToken string
 */
 export function jwtSign(payload: JwtPayload | Object | String, options: SignOptions = {}): string {
 	const secret: Secret = process.env.JWT_SECRET || 't3MP0Rarys3cr37'

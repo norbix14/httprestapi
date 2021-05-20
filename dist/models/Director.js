@@ -12,9 +12,6 @@ const DirectorSchema = new mongoose_1.Schema({
         lowercase: true,
         trim: true
     },
-    birthdate: {
-        type: Date
-    },
     movies: [
         {
             type: mongoose_1.Types.ObjectId,

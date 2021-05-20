@@ -15,9 +15,6 @@ const ActorSchema = new Schema({
 		lowercase: true,
 		trim: true
 	},
-	birthdate: {
-		type: Date
-	},
 	movies: [
 		{
 			type: Types.ObjectId,

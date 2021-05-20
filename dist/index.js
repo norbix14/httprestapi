@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = __importDefault(require("./app"));
 const debug_1 = __importDefault(require("debug"));
 const http_1 = __importDefault(require("http"));
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '4000');
 app_1.default.set('port', port);
 const server = http_1.default.createServer(app_1.default);
 server.listen(port, () => console.log(`Server on port ${port}`));

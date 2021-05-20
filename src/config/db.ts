@@ -15,10 +15,10 @@ import '../models/TvShow'
  * Function to connect DDBB
  * 
  * @param {string} uri - string connection to MongoDB
- * @param {object} [options] - configuration object
+ * @param {ConnectOptions} options - configuration object
  * @returns {void}
 */
-export default function MongoConn(uri: string, options: ConnectOptions = {}) {
+export default function (uri: string, options: ConnectOptions = {}): void {
   try {
     if (!uri || uri.length <= 0) {
       throw new Error('Invalid URI connection')

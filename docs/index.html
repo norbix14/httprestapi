@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HTTP REST API</title>
+	<meta name="description" content="Documentation for HTTP REST API">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">HTTP REST API</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>HTTP REST API</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#development-challenge-for-nodejs" id="development-challenge-for-nodejs" style="color: inherit; text-decoration: none;">
+					<h1>Development Challenge for Node.js</h1>
+				</a>
+				<p><strong>HTTP REST API</strong></p>
+				<p>I used the structure of <strong><a href="https://expressjs.com/en/starter/generator.html">express-generator</a></strong></p>
+				<p>It is to quickly create an application skeleton, but it was modified a little because this is an API</p>
+				<a href="#steps" id="steps" style="color: inherit; text-decoration: none;">
+					<h2>Steps</h2>
+				</a>
+				<p>Clone this repository</p>
+				<pre><code><span style="color: #D4D4D4">    # </span><span style="color: #9CDCFE">Using</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">GithubCLI</span>
+<span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">gh</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">repo</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">clone</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">norbix14</span><span style="color: #D4D4D4">/</span><span style="color: #9CDCFE">httprestapi</span>
+</code></pre>
+				<p>Install dependencies</p>
+				<pre><code><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">npm</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">i</span>
+</code></pre>
+				<a href="#use" id="use" style="color: inherit; text-decoration: none;">
+					<h2>Use</h2>
+				</a>
+				<p>Run development mode (compile Typescript)</p>
+				<pre><code><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">npm</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">run</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">development</span>
+</code></pre>
+				<p>Run server (compiled)</p>
+				<pre><code><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">npm</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">start</span>
+</code></pre>
+				<p>Server: <strong><a href="http://localhost:4000">http://localhost:4000</a></strong></p>
+				<p>Entry point: <strong>/api/v1/improvein</strong></p>
+				<a href="#paths" id="paths" style="color: inherit; text-decoration: none;">
+					<h2>Paths</h2>
+				</a>
+				<p><strong>Login</strong></p>
+				<ul>
+					<li>Login: <strong>POST /login</strong>. Example:<pre><code><span style="color: #D4D4D4">  # </span><span style="color: #9CDCFE">In</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">the</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">body</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">of</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">the</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">request</span>
+<span style="color: #D4D4D4">  {</span>
+<span style="color: #D4D4D4">      </span><span style="color: #CE9178">&quot;email&quot;</span><span style="color: #D4D4D4">: </span><span style="color: #CE9178">&quot;email@mail.com&quot;</span><span style="color: #D4D4D4">,</span>
+<span style="color: #D4D4D4">      </span><span style="color: #CE9178">&quot;password&quot;</span><span style="color: #D4D4D4">: </span><span style="color: #CE9178">&quot;password&quot;</span>
+<span style="color: #D4D4D4">  }</span>
+</code></pre>
+					</li>
+				</ul>
+				<p><strong>Jwt</strong></p>
+				<ul>
+					<li><p>Refresh token: <strong>POST /jwt/refresh</strong></p>
+						<pre><code><span style="color: #D4D4D4">  # </span><span style="color: #9CDCFE">In</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">the</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">body</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">of</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">the</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">request</span>
+<span style="color: #D4D4D4">  {</span>
+<span style="color: #D4D4D4">      </span><span style="color: #CE9178">&quot;email&quot;</span><span style="color: #D4D4D4">: </span><span style="color: #CE9178">&quot;email@mail.com&quot;</span>
+<span style="color: #D4D4D4">  }</span>
+</code></pre>
+					</li>
+				</ul>
+				<p><strong>Movies</strong></p>
+				<ul>
+					<li>Get all the movies: <strong>GET /movies</strong></li>
+					<li>Get a movie <strong>GET /movies/:query</strong>. Example: <strong>/movies/name=titanic</strong></li>
+					<li>Add a new movie <strong>POST /movies</strong></li>
+				</ul>
+				<p><strong>Tv Shows</strong></p>
+				<ul>
+					<li>Get all the tv shows: <strong>GET /tvshows</strong></li>
+					<li>Get a tv show <strong>GET /tvshows/:query</strong>. Example: <strong>/tvshows/name=tvshow&amp;episode=1</strong></li>
+					<li>Add a new tv show <strong>POST /tvshows</strong></li>
+				</ul>
+				<a href="#environment" id="environment" style="color: inherit; text-decoration: none;">
+					<h2>Environment</h2>
+				</a>
+				<p>In the <code>.env</code> file:</p>
+				<pre><code><span style="color: #D4D4D4">    # </span><span style="color: #9CDCFE">MongoDB</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">URI</span>
+<span style="color: #D4D4D4">    </span><span style="color: #4FC1FF">URI_MONGODB</span><span style="color: #D4D4D4">=</span><span style="color: #CE9178">&quot;mongodb+srv://&lt;user&gt;:&lt;password&gt;@&lt;cluster&gt;.mongodb.net/&lt;database&gt;?retryWrites=true&amp;w=majority&quot;</span>
+
+<span style="color: #D4D4D4">    # </span><span style="color: #9CDCFE">App</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">port</span>
+<span style="color: #D4D4D4">    </span><span style="color: #4FC1FF">PORT</span><span style="color: #D4D4D4">=</span><span style="color: #CE9178">&quot;4000&quot;</span>
+
+<span style="color: #D4D4D4">    # </span><span style="color: #9CDCFE">JSONWebToken</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">secret</span>
+<span style="color: #D4D4D4">    </span><span style="color: #4FC1FF">JWT_SECRET</span><span style="color: #D4D4D4">=</span><span style="color: #CE9178">&quot;somesecretkey&quot;</span>
+</code></pre>
+				<a href="#linters" id="linters" style="color: inherit; text-decoration: none;">
+					<h2>Linters</h2>
+				</a>
+				<p><a href="https://jshint.com/docs/options/">JsHint</a></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/app.html">app</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/config_db.html">config/db</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/controllers_director.html">controllers/director</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/controllers_jwt.html">controllers/jwt</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/controllers_login.html">controllers/login</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/controllers_movies.html">controllers/movies</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/controllers_tvshow.html">controllers/tvshow</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/handlers_custom_error_handler.html">handlers/custom-<wbr>error-<wbr>handler</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/handlers_jwt_handler.html">handlers/jwt-<wbr>handler</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/models_actor.html">models/<wbr>Actor</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/models_director.html">models/<wbr>Director</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/models_movie.html">models/<wbr>Movie</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/models_tvshow.html">models/<wbr>TvShow</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/routes.html">routes</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/routes_director.html">routes/director</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/routes_jwt.html">routes/jwt</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/routes_login.html">routes/login</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/routes_movie.html">routes/movie</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/routes_tvshow.html">routes/tvshow</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/src_index.html">src/index</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/validators_jwt.html">validators/jwt</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/validators_login.html">validators/login</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/validators_validation_error_handler.html">validators/validation-<wbr>error-<wbr>handler</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -9,7 +9,7 @@ require("../models/Actor");
 require("../models/Director");
 require("../models/Movie");
 require("../models/TvShow");
-function MongoConn(uri, options = {}) {
+function default_1(uri, options = {}) {
     try {
         if (!uri || uri.length <= 0) {
             throw new Error('Invalid URI connection');
@@ -24,5 +24,5 @@ function MongoConn(uri, options = {}) {
         console.log('Something wrong happened with MongoDB');
     }
 }
-exports.default = MongoConn;
+exports.default = default_1;
 //# sourceMappingURL=db.js.map

@@ -18,7 +18,7 @@ import { ErrorHttp } from '../interfaces/error.interface'
  * @param {NextFunction} next - continue to the next middleware
  * @returns {void}
 */
-export const createNotFoundError = function (req: Request, res: Response, next: NextFunction): void {
+export function createNotFoundError (req: Request, res: Response, next: NextFunction): void {
 	next(createError(404))
 }
 
@@ -31,7 +31,7 @@ export const createNotFoundError = function (req: Request, res: Response, next: 
  * @param {NextFunction} next - continue to the next middleware
  * @returns {void}
 */
-export const handleNotFoundError = function (err: ErrorHttp, req: Request, res: Response, next: NextFunction): void {
+export function handleNotFoundError (err: ErrorHttp, req: Request, res: Response, next: NextFunction): void {
   if (res.headersSent) {
     return next(err)
   }

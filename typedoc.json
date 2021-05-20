@@ -1,0 +1,11 @@
+{
+	"entryPoints": [
+		"src"
+	],
+	"exclude": [
+		"**/*+(.interface|.spec|.e2e).ts"
+	],
+	"highlightTheme": "dark-plus",
+	"name": "HTTP REST API",
+	"out": "docs"
+}
